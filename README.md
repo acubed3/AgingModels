@@ -9,22 +9,19 @@ Conceptually, one can consider a human (or any other) organism as an evolving co
 
 ## Equations that describe the dynamics of aging for interacting organism's physiological units
 
-It is shown in [3,4,5] that the dynamics of aging for interacting degrees of freedom, or physiological units of the organism - genes, metabolites, immune system, etc., can be described by the following deterministic differential equation:
+It is shown in [3,4,5] that the dynamics of aging for interacting degrees of freedom, or physiological units of the organism - genes, metabolites, immune system, etc., can be described by the following deterministic differential equation,
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{d\vec{x}}{dt}=-A(t)\vec{x}">
+![eq1](https://latex.codecogs.com/svg.latex?\frac{d\vec{x}}{dt}=-A(t)\vec{x}+\vec{f}(t)+\delta\vec{f}(t),\hspace{100pt}(1))
 
-where  is a vector with components corresponding to the values of interacting physiological units, for example, gene expression levels and concentrations of metabolites;
- - a slowly changing matrix describing the interaction between physiological units;
- - vector fields associated with average environmental stress and the signaling or control processes in the body, which are considered as changing slowly;
- - random rapidly fluctuating force.
+where ![x](https://latex.codecogs.com/svg.latex?\vec{x}=(x_1,x_2,...x_n)) is a vector with components corresponding to the values of interacting physiological units, for example, gene expression levels and concentrations of metabolites; ![A](https://latex.codecogs.com/svg.latex?A(t)) a slowly changing matrix describing the interaction between physiological units; ![f](https://latex.codecogs.com/svg.latex?\vec{f}(t)) are vector fields associated with average environmental stress and the signaling or control processes in the body, which are considered as changing slowly; ![df](https://latex.codecogs.com/svg.latex?\delta\vec{f}(t)) random rapidly fluctuating force.
 
-For short-lived organisms, aging can be described by the dynamics of a single variable following the Langevin equation, meaning that such variable can be a biomarker of aging:
+For short-lived organisms, aging can be described by the dynamics of a single variable following the Langevin equation, meaning that such variable can be a biomarker of aging,
 
- 									 (2)
+![eq2](https://latex.codecogs.com/svg.latex?\frac{d\vec{y}}{dt}=-\alpha\vec{y}+\vec{f}'(t)+\delta\vec{f}'(t),\hspace{100pt}(2)) 
 
-Where  is, up to multiplication by a negative constant, the smallest (largest negative) eigenvalue of the matrix A(t).
+where ![alpha](https://latex.codecogs.com/svg.latex?\alpha) is, up to multiplication by a negative constant, the smallest (largest negative) eigenvalue of the matrix ![A](https://latex.codecogs.com/svg.latex?A(t)).
 
-However, for human and long-lived organisms, such behavior (equation 2) takes place only at a specific moment, namely, at the end of life or in the case of several chronic diseases [4, 5, 9].
+However, for human and long-lived organisms, such behavior (eq. 2) takes place only at a specific moment, namely, at the end of life or in the case of several chronic diseases [4, 5, 9].
 
 ## Equations for a limited number of degrees of freedom
 
@@ -50,7 +47,7 @@ Measures of gene expression rates can be a powerful tool to study aging in the c
 **First of all**, analysis of matrix eigenvalues can give us a representation of GRN structure (clustering, existence of cliques, hubsn and other patterns). We can analyze how gene-gene correlations change in time and try to determine possible conservation laws and then interpret our results from a biological point of view. An evolution of matrix structure in time can indirectly describe aging.
 
 **Secondly**, we can speak about chaotic behavior and bifurcations in GRN dynamics by analyzing level spacing distribution. Based on work [5], we assume that this analysis is strongly related to aging. It is a well-known fact that GRN works near criticality [6,7]. We believe it is possible to develop a more rigorous and comprehensive aging model based on the analysis of GRN dynamics and its spectral properties. Our beliefs are supported by the fact that spectral analysis was successfully used for connectome studies and it produced several outstanding results:
-The comparative analysis, based on structural connectomes for several organisms - C. elegans, macaque, and human, has demonstrated that the human connectome differs from the other connectomes. This difference can be described quantitatively by graph spectra [11].
+The comparative analysis, based on structural connectomes for several organisms - *C. elegans*, macaque, and human, has demonstrated that the human connectome differs from the other connectomes. This difference can be described quantitatively by graph spectra [11].
 It was shown that the human connectome operates near criticality, and properties of this network can be captured by the quite simple mathematical model (Kuramoto model) [12].
 From these works (and many other works in the field of theoretical neuroscience), it seems pretty clear that complicated dynamics of connectome can be described in terms of relatively simple models whose predictions can be experimentally verified. We should emphasize that all the progress is based only on a few things: 1) existence of appropriate data, 2) correct choice of model degrees of freedom. 
 
